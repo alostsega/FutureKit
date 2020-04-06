@@ -308,7 +308,7 @@ public class FutureQueue {
 
     private func removeExecutingJob(_ job: ExecutingJob) {
         executingJobs.modify {
-            if let found = $0.index(of: job) {
+            if let found = $0.firstIndex(of: job) {
                 $0.remove(at: found)
             }
         }
